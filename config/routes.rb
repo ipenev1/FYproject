@@ -1,10 +1,17 @@
 FYproject::Application.routes.draw do
   resources :users
 
+	#match 'pages/help'     => 'pages#help'
+	#match 'pages/about'    => 'pages#about'
+	#match 'pages/contact'  => 'pages#contact'
 
   get "pages/home"
-
+  get "pages/about"
   get "pages/contact"
+  
+ 
+	
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

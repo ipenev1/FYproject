@@ -9,7 +9,7 @@ group :assets do
 	gem 'uglifier', '1.2.3'
 end
 
-  # gem 'therubyracer', :platforms => :ruby
+   gem 'therubyracer', :platforms => :ruby
 
 group :development do
 	gem 'sqlite3', '1.3.5'
