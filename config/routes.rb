@@ -1,13 +1,17 @@
 FYproject::Application.routes.draw do
   resources :users
 
-	#match 'pages/help'     => 'pages#help'
-	#match 'pages/about'    => 'pages#about'
-	#match 'pages/contact'  => 'pages#contact'
+	root :to => 'pages#home'
+	match '/help',  :to   => 'pages#help'
+	match '/about', :to  => 'pages#about'
+	match '/contact', :to => 'pages#contact'
+	
+
 
   get "pages/home"
-  get "pages/about"
-  get "pages/contact"
+  #get "pages/about"
+  #get "pages/contact"
+  #get "pages/help"
   
  
 	
