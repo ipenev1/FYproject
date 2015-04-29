@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.19'
+gem 'sqlite3', '1.3.5'
+gem 'gravatar_image_tag', '1.2.0'
 
 
 group :assets do
@@ -12,7 +14,6 @@ end
    gem 'therubyracer', :platforms => :ruby
 
 group :development do
-	gem 'sqlite3', '1.3.5'
 	gem 'rspec-rails', '2.10.0'
 	gem 'tomkersten-annotate-models', '1.0.4'
 	gem 'annotate', '2.5.0'
