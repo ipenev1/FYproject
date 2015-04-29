@@ -16,6 +16,7 @@ group :development do
 	gem 'rspec-rails', '2.10.0'
 	gem 'tomkersten-annotate-models', '1.0.4'
 	gem 'annotate', '2.5.0'
+	gem 'webrat', '0.7.3'
 end
 
 group :test do

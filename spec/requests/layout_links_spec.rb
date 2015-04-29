@@ -31,13 +31,13 @@ describe "LayoutLinks" do
 	
 	it "should have right links on the layouts" do
 		visit root_path
-		response.should have_selector('title', :content => "Home")
+		response.should have_selector('title', :content => "home")
 		click_link "About"
-		response.should have_selector('title', :content => "About")
+		response.should have_selector('title', :content => "about")
 		click_link "Contact"
-		response.should have_selector('title', :content => "Contact")
+		response.should have_selector('title', :content => "contact")
 		click_link "Home"
-		response.should have_selector('title', :content => "Home")
+		response.should have_selector('title', :content => "home")
 		click_link "Sign up now!"
 		response.should have_selector('title', :content => "Sign up")
 		response.should have_selector('a[href="/"]>img')
