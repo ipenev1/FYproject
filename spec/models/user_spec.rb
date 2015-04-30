@@ -19,8 +19,8 @@ describe User do
 	@attr = {
 	:name => "example user", 
 	:email => "user@example.com",
-	:password  => "example",
-	:password_confirmation => "example"
+	:password  => "testpassword",
+	:password_confirmation => "testpassword"
 }
   end
   
