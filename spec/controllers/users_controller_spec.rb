@@ -53,7 +53,7 @@ describe UsersController do
 												   :content => "Next")
 			end
 			
-			It "should have delete links for admins" do
+			it "should have delete links for admins" do
 				@user.toggle!(:admin)
 				other_user = User.all.second
 				get :index
@@ -61,7 +61,7 @@ describe UsersController do
 												   :content => "delete")
 			end
 			
-			It "should not have delete links for non-admins" do
+			it "should not have delete links for non-admins" do
 				other_user = User.all.second
 				get :index
 				response.should_not have_selector('a', :href => user_path(other_user),
@@ -252,7 +252,7 @@ describe UsersController do
 					 :password => "passwordtest", :password_confirmation => "passwordtest"}
 		end
 		
-		it "should change the user's attributes"
+		it "should change the user's attributes" do
 			put :update, :id => @user, :user => @attr
 			user =  assigns(:user)
 			@user.reload
@@ -304,7 +304,6 @@ describe UsersController do
 			response.should redirect_to(root_path)
 		end
 	end
-  end
   
     describe "DELETE 'destroy'" do
 	
@@ -355,4 +354,5 @@ describe UsersController do
 			end
 		end
 	end
+end
 end

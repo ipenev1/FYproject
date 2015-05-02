@@ -4,7 +4,8 @@ FYproject::Application.routes.draw do
   #get "users/new"
 
   resources :users
-  resources :sessions, :only => [:new, :create, :destroy]
+  resources :sessions,   :only => [:new, :create, :destroy]
+  resources :microposts, :only => [:create, :destroy]
 
 	root :to => 'pages#home'
 	
