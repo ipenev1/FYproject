@@ -72,9 +72,9 @@ describe UsersController do
 	
 	describe "GET 'show'" do
 	
-	before(:each) do
-		@user = Factory(:user)
-	end
+		before(:each) do
+			@user = Factory(:user)
+		end
 		it "should be successful" do
 			get :show, :id => @user.id
 			response.should be_success
@@ -125,6 +125,14 @@ describe UsersController do
 			get :show, :id => @user
 			response.should have_selector('td.sidebar',
 											:content => @user.microposts.count.to_s)
+		end
+		
+		describe "when signed in as another user" do
+			it "should be successful" do
+				test_sign_in(Factory(:user, :email => Factory.next(:email)))
+				get :show, :id => @user
+				response.should be_success
+			end
 		end
 	end
 	
