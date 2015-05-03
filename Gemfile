@@ -4,6 +4,7 @@ gem 'rails', '3.2.19'
 gem 'sqlite3', '1.3.5'
 gem 'gravatar_image_tag', '1.2.0'
 gem 'will_paginate', '3.0.7'
+gem 'thin' 
 
 
 group :assets do

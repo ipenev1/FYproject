@@ -23,7 +23,7 @@ describe RelationshipsController do
 		end
 		
 		it "should create a relationship" do
-			lambda da
+			lambda do
 				post :create, :relationship => {:followed_id => @followed}
 				response.should redirect_to(user_path(@followed))
 			end.should change(Relationship, :count).by(1)
