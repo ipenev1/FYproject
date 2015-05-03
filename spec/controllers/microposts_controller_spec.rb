@@ -94,8 +94,6 @@ describe MicropostsController do
 					response.should redirect_to(root_path)
 				end.should change(Micropost, :count).by(-1)
 			end
-			
 		end
-	
 	end
 end
